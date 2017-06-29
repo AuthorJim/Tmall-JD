@@ -4,7 +4,7 @@
   "description": "Tmall-JD front-end resource",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8080 "
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "hogan": "^1.0.2"
+    "hogan": "^1.0.2",
+    "jquery": "^1.11.3"
   }
 }
