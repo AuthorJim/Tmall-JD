@@ -2,7 +2,7 @@
  * @Author: AuthorJim 
  * @Date: 2017-06-28 14:12:04 
  * @Last Modified by: AuthorJim
- * @Last Modified time: 2017-06-29 12:45:10
+ * @Last Modified time: 2017-06-30 12:59:11
  */
 
 //  通用工具封装
@@ -12,27 +12,27 @@ var conf = {
 }
 var utils = {
     // 网络请求
-    request: function (params) {
+    request: function (param) {
         var _this = this
         $.ajax({
-            type: params.method || 'get',
-            url: params.url || '',
-            dataType: params.type || 'json',
-            data: params.data || '',
+            method: param.method || 'get',
+            url: param.url || '',
+            dataType: param.type || 'json',
+            data: param.data || '',
             success: function (res) {
                 if (0 === res.status) {
                     // 请求成功
-                    typeof params.success === 'function' && params.success(res.data, res.msg)
+                    typeof param.success === 'function' && param.success(res.data, res.msg)
                 } else if (10 === res.status) {
                     // 没有登录状态，需要强制登录
                     _this.doLogin()
                 } else if (1 === res.status) {
                     // 请求数据错误
-                    typeof params.error === 'function' && params.error(err.msg)
+                    typeof param.error === 'function' && param.error(res.msg)
                 }
             },
             error: function (err) {
-                typeof params.error === 'function' && params.error(err.statusText)
+                typeof param.error === 'function' && param.error(err.statusText)
             }
         })
     },
@@ -84,7 +84,7 @@ var utils = {
 
     // 统一登录处理
     doLogin: function () {
-        window.location.href = './login.html?redirect' + encodeURIComponent(window.location.href)
+        window.location.href = './user-login.html?redirect' + encodeURIComponent(window.location.href)
     },
 
     // 回到主页

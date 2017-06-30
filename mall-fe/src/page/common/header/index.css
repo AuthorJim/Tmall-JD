@@ -2,11 +2,9 @@
  * @Author: AuthorJim 
  * @Date: 2017-06-28 20:19:43 
  * @Last Modified by: AuthorJim
- * @Last Modified time: 2017-06-28 22:05:26
+ * @Last Modified time: 2017-06-30 10:46:41
  */
- .header{
-     
- }
+
 .logo{
     position: absolute;
     display: block;
@@ -33,4 +31,15 @@
     width: 80px;
     height: 44px;
     margin-top: -10px;
+}
+
+/*这是面包屑导航*/
+.crumb{
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border-top: 2px solid #c60023;
+    background: #eee;
+    color: #888;
 }
