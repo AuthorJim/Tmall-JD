@@ -2,7 +2,7 @@
  * @Author: AuthorJim 
  * @Date: 2017-06-28 20:19:26 
  * @Last Modified by: AuthorJim
- * @Last Modified time: 2017-06-29 13:36:37
+ * @Last Modified time: 2017-06-30 17:40:35
  */
 require('./index.css')
 var _util = require('util/index.js')
@@ -18,7 +18,7 @@ var header = {
         var keyword = _util.getUrlParam('keyword')
         // 当存在keyword时，就回填入搜索框
         if (keyword) {
-            $searchInput.val('keyword')
+            $searchInput.val(keyword)
         }
     },
     // 事件处理方法
