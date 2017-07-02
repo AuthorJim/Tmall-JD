@@ -2,11 +2,20 @@
  * @Author: AuthorJim 
  * @Date: 2017-06-29 15:49:45 
  * @Last Modified by: AuthorJim
- * @Last Modified time: 2017-06-30 14:13:25
+ * @Last Modified time: 2017-07-02 13:19:45
  */
 var _util = require('util/index')
 
 var _user = {
+    // 检查登陆状态
+    checkLogin: function (resolve, reject) {
+        _util.request({
+            url: _util.getServerUrl('/user/get_user_info.do'),
+            method: 'POST',
+            success: resolve,
+            error: reject
+        })
+    },
     // 用户登录
     login: function (userInfo, resolve, reject) {
         _util.request({
@@ -102,12 +111,12 @@ var _user = {
         })
     },
     // 用户登出
-    logout : function(resolve, reject){
-        _mm.request({
-            url     : _mm.getServerUrl('/user/logout.do'),
-            method  : 'POST',
-            success : resolve,
-            error   : reject
+    logout: function (resolve, reject) {
+        _util.request({
+            url: _util.getServerUrl('/user/logout.do'),
+            method: 'POST',
+            success: resolve,
+            error: reject
         });
     }
 }
