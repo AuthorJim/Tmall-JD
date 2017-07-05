@@ -105,12 +105,3 @@
     color: #666;
 }
 
-/*错误信息*/
-.error-tip {
-    height: 60px;
-    line-height: 60px;
-    font-weight: 700;
-    font-size: 16px;
-    text-align: center;
-    color: #f60;
-}

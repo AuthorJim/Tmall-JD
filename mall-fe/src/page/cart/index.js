@@ -2,7 +2,7 @@
  * @Author: AuthorJim 
  * @Date: 2017-07-01 18:14:18 
  * @Last Modified by: AuthorJim
- * @Last Modified time: 2017-07-02 14:13:08
+ * @Last Modified time: 2017-07-02 14:51:57
  */
 
 require('../common/header/index')
@@ -125,7 +125,7 @@ var cartPage = {
         $(document).on('click', '.btn-submit', function () {
             // 当总价大于0时，进行提交
             if (_this.data.cartInfo&&_this.data.cartInfo.cartTotalPrice>0) {
-                window.location.href = './confirm.html'
+                window.location.href = './order-confirm.html'
             }else{
                 _util.errorTips('请选择商品后再提交')
             }

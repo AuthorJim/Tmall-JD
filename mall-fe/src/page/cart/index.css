@@ -2,7 +2,7 @@
  * @Author: AuthorJim 
  * @Date: 2017-07-01 18:14:32 
  * @Last Modified by: AuthorJim
- * @Last Modified time: 2017-07-01 19:10:08
+ * @Last Modified time: 2017-07-02 17:23:06
  */
 
 .cart-table {
@@ -138,13 +138,3 @@
 }
 
 
-/*错误信息*/
-
-.error-tip {
-    height: 60px;
-    line-height: 60px;
-    font-weight: 700;
-    font-size: 16px;
-    text-align: center;
-    color: #f60;
-}
