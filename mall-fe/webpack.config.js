@@ -2,7 +2,7 @@
  * @Author: AuthorJim 
  * @Date: 2017-06-28 13:21:13 
  * @Last Modified by: AuthorJim
- * @Last Modified time: 2017-07-05 17:27:42
+ * @Last Modified time: 2017-07-07 14:37:19
  */
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -33,6 +33,7 @@ var config = {
         'order-confirm': ['./src/page/order-confirm/index.js'],
         'order-list': ['./src/page/order-list/index.js'],
         'order-detail': ['./src/page/order-detail/index.js'],
+        'payment': ['./src/page/payment/index.js'],
         'user-login': ['./src/page/user-login/index.js'],
         'user-register': ['./src/page/user-register/index.js'],
         'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
@@ -90,6 +91,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('order-list', '订单列表页')),
         new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('payment', '支付确认页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),

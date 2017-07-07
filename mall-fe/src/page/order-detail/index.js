@@ -2,7 +2,7 @@
  * @Author: AuthorJim 
  * @Date: 2017-07-05 15:10:41 
  * @Last Modified by: AuthorJim
- * @Last Modified time: 2017-07-05 18:56:55
+ * @Last Modified time: 2017-07-07 14:33:33
  */
 require('../common/header/index')
 require('../common/nav/index')
@@ -30,7 +30,6 @@ var orderList = {
             if (window.confirm('确定要删除该订单吗？')) {
                 _order.cancelOrder(_this.data.orderNo, function (res) {
                     _util.successTips('该订单已取消')
-                    // _this.data.isCancelable = false
                     _this.loadOrderDetail()
                     $('.order.status').text('已取消')
                 }, function (errMsg) {
