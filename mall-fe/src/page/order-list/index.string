@@ -36,6 +36,6 @@
 {{/list}}
 {{^list}}
 <div class="error-tip">
-    您当前稍微创建订单
+    您当前尚未创建订单
 </div>
 {{/list}}

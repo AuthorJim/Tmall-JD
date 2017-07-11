@@ -2,7 +2,7 @@
  * @Author: AuthorJim 
  * @Date: 2017-06-29 23:13:15 
  * @Last Modified by: AuthorJim
- * @Last Modified time: 2017-07-01 11:55:30
+ * @Last Modified time: 2017-07-11 13:13:46
  */
 require('./index.css')
 require('../common/nav-simple/index.css')
@@ -77,7 +77,7 @@ var resetPassword = {
             var password = $.trim($('#password').val())
             // 当输入新密码后
             if (password && password.length >= 6) {
-                _user.checkAnswer({
+                _user.resetPassword({
                     username: _this.data.username,
                     passwordNew: password,
                     forgetToken: _this.data.token

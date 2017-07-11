@@ -4,7 +4,8 @@
   "description": "Tmall-JD front-end resource",
   "main": "index.js",
   "scripts": {
-    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8080 "
+    "dev": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8080 ",
+    "dist": "set WEBPACK_ENV=online && webpack -p"
   },
   "author": "",
   "license": "ISC",

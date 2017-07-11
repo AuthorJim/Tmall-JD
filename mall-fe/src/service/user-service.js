@@ -2,7 +2,7 @@
  * @Author: AuthorJim 
  * @Date: 2017-06-29 15:49:45 
  * @Last Modified by: AuthorJim
- * @Last Modified time: 2017-07-02 13:19:45
+ * @Last Modified time: 2017-07-11 13:16:42
  */
 var _util = require('util/index')
 
@@ -74,7 +74,7 @@ var _user = {
     // 重置密码
     resetPassword: function (userInfo, resolve, reject) {
         _util.request({
-            url: _util.getServerUrl('/user/forget_reset_password'),
+            url: _util.getServerUrl('/user/forget_reset_password.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,
